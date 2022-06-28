@@ -1,0 +1,19 @@
+numbers_of_floors = int(input())
+numbers_of_flats = int(input())
+
+flat_numbers = 0
+flat_name = ''
+
+for floor in range(numbers_of_floors, 0, -1):
+    for flat in range(numbers_of_flats):
+        flat_numbers = floor * 10 + flat
+
+        if floor == numbers_of_floors:
+            flat_name = f'L{flat_numbers}'
+        elif floor % 2 != 0:
+            flat_name = f'A{flat_numbers}'
+        else:
+            flat_name = f'O{flat_numbers}'
+
+        print(flat_name, end=' ')
+    print()
