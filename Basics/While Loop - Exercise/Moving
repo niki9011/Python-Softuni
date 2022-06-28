@@ -1,0 +1,16 @@
+w = int(input())
+l = int(input())
+h = int(input())
+available_space = w * l * h
+need_space = 0
+left_space = 0
+while available_space > need_space:
+    command = input()
+    if command == 'Done':
+        break
+    need_space += int(command)
+left_space = abs(need_space - available_space)
+if available_space > need_space:
+    print(f'{left_space} Cubic meters left.')
+else:
+    print(f'No more free space! You need {left_space} Cubic meters more.')
