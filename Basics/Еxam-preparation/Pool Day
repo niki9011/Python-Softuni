@@ -1,0 +1,12 @@
+import math
+number_people = int(input())
+tax = float(input())
+deck_chair = float(input())
+umbrella =float(input())
+prace = number_people * tax
+number_people_wont = math.ceil(number_people * 0.75)
+prace_people = number_people_wont * deck_chair
+umbrela_number = math.ceil(number_people * 0.50)
+umbrella_prace = umbrella * umbrela_number
+all_prace = prace + prace_people + umbrella_prace
+print(f'{all_prace:.2f} lv.')
