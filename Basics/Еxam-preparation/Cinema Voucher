@@ -1,0 +1,45 @@
+price_voucher = int(input())
+counter_film = 0
+counter_other = 0
+flag = False
+flag_1 = False
+while True:
+    command = input()
+    character = len(command)
+    if command == "End":
+        flag = True
+        break
+
+    if command != "End":
+        if 8 < character:
+            price = ord(command[0]) + ord(command[1])
+            if price <= price_voucher:
+                price_voucher -= price
+                counter_film += 1
+            else:
+                flag = True
+                break
+        elif 8 >= character:
+            price = ord(command[0])
+            if price < price_voucher:
+                price_voucher -= price
+                counter_other += 1
+            else:
+                flag_1 = True
+                break
+if flag:
+    print(f"{counter_film}")
+    print(f"{counter_other}")
+if flag_1:
+    print(f"{counter_film}")
+    print(f"{counter_other}")
+
+
+
+
+
+
+
+
+
+
