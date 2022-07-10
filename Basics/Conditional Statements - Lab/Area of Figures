@@ -1,5 +1,6 @@
 from math import pi
 figura = input()
+
 area = 0
 
 if figura == 'square':
@@ -16,4 +17,5 @@ elif figura == 'triangle':
     a = float(input())
     h = float(input())
     area = 1 / 2 * a * h
+    
 print(f'{area:.3f}')
